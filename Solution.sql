@@ -1,12 +1,12 @@
-CREATE SCHEMA pizza_runner;
+CREATE SCHEMA pizza_runner; -- Creating Schema pizza_runner
 SET search_path = pizza_runner;
 
-DROP TABLE IF EXISTS runners;
-CREATE TABLE runners (
+DROP TABLE IF EXISTS runners; -- Dropping Table runners if it exists
+CREATE TABLE runners ( -- Creating Table runners
   "runner_id" INTEGER,
   "registration_date" DATE
 );
-INSERT INTO runners
+INSERT INTO runners -- Inserting Values Into Table runners
   ("runner_id", "registration_date")
 VALUES
   (1, '2021-01-01'),
@@ -15,8 +15,8 @@ VALUES
   (4, '2021-01-15');
 
 
-DROP TABLE IF EXISTS customer_orders;
-CREATE TABLE customer_orders (
+DROP TABLE IF EXISTS customer_orders; -- Dropping Table Customer_orders if it exists
+CREATE TABLE customer_orders ( -- Creating Table customer_orders
   "order_id" INTEGER,
   "customer_id" INTEGER,
   "pizza_id" INTEGER,
@@ -25,7 +25,7 @@ CREATE TABLE customer_orders (
   "order_time" TIMESTAMP
 );
 
-INSERT INTO customer_orders
+INSERT INTO customer_orders -- Inserting Values Into Table customer_orders
   ("order_id", "customer_id", "pizza_id", "exclusions", "extras", "order_time")
 VALUES
   ('1', '101', '1', '', '', '2020-01-01 18:05:02'),
