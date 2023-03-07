@@ -44,8 +44,8 @@ VALUES
   ('10', '104', '1', '2, 6', '1, 4', '2020-01-11 18:34:49');
 
 
-DROP TABLE IF EXISTS runner_orders;
-CREATE TABLE runner_orders (
+DROP TABLE IF EXISTS runner_orders; -- Dropping Table runner_orders if it exists
+CREATE TABLE runner_orders ( -- Creating Table runner_orders
   "order_id" INTEGER,
   "runner_id" INTEGER,
   "pickup_time" VARCHAR(19),
@@ -54,7 +54,7 @@ CREATE TABLE runner_orders (
   "cancellation" VARCHAR(23)
 );
 
-INSERT INTO runner_orders
+INSERT INTO runner_orders -- Inserting Values Into Table runner_orders
   ("order_id", "runner_id", "pickup_time", "distance", "duration", "cancellation")
 VALUES
   ('1', '1', '2020-01-01 18:15:34', '20km', '32 minutes', ''),
